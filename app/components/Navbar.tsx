@@ -11,7 +11,7 @@ const Navbar = async () => {
                 <Link href="/">
                     <Image src="/logo.png" alt="logo" width={144} height={30} />
                 </Link>
-
+                {/*This is a test commit*/}
                 <div className="flex items-center gap-5 text-black">
                     {session && session?.user ? (
                         <>
