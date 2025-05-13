@@ -1,4 +1,5 @@
 import type {Config} from "tailwindcss";
+import colors from "tailwindcss/colors";
 
 const config: Config = {
     content: [
@@ -13,6 +14,7 @@ const config: Config = {
                 xs: "475px",
             },
             colors: {
+                ...colors,
                 primary: {
                     "100": "#FFE8F0",
                     DEFAULT: "#EE2B69",
