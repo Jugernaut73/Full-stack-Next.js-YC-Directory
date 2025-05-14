@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+import type {Config} from "tailwindcss";
 
 const config: Config = {
     content: [
@@ -13,15 +13,21 @@ const config: Config = {
                 xs: "475px",
             },
             colors: {
-                primary: "#EE2B69",
-                "primary-100": "#FFE8F0",
+                primary: {
+                    "100": "#FFE8F0",
+                    DEFAULT: "#EE2B69",
+                },
                 secondary: "#FBE843",
-                black: "#000000",
-                "black-100": "#333333",
-                "black-200": "#141413",
-                "black-300": "#7D8087",
-                white: "#FFFFFF",
-                "white-100": "#F7F7F7",
+                black: {
+                    "100": "#333333",
+                    "200": "#141413",
+                    "300": "#7D8087",
+                    DEFAULT: "#000000",
+                },
+                white: {
+                    "100": "#F7F7F7",
+                    DEFAULT: "#FFFFFF",
+                },
             },
             fontFamily: {
                 "work-sans": ["var(--font-work-sans)"],
