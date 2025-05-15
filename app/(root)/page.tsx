@@ -1,5 +1,7 @@
 import SearchForm from "@/components/SearchForm";
 import StartupCard from "@/components/StartupCard";
+import {STARTUPS_QUERY} from "@/sanity/lib/queries";
+import {client} from "@/sanity/lib/client";
 
 export default async function Home({ searchParams }: {
     searchParams: Promise<{ query?: string}>
@@ -7,16 +9,20 @@ export default async function Home({ searchParams }: {
 
     const query = (await searchParams).query;
 
-    const posts = [{
-            _createdAt: new Date(),
-            views: 55,
-            author: { _id: 1, name: 'Adrian' },
-            _id: 1,
-            description: 'This is a description',
-            image: 'https://cacm.acm.org/wp-content/uploads/2025/01/010325.News_.Can-LLMs-Make2-G.jpg',
-            category: 'Robots',
-            title: 'We Robots'
-        }];
+    const posts = await client.fetch(STARTUPS_QUERY);
+
+    console.log(JSON.stringify(posts, null, 2));
+
+    // const posts = [{
+    //         _createdAt: new Date(),
+    //         views: 55,
+    //         author: { _id: 1, name: 'Adrian' },
+    //         _id: 1,
+    //         description: 'This is a description',
+    //         image: 'https://cacm.acm.org/wp-content/uploads/2025/01/010325.News_.Can-LLMs-Make2-G.jpg',
+    //         category: 'Robots',
+    //         title: 'We Robots'
+    //     }];
 
   return (
     <>
