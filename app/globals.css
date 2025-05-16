@@ -50,7 +50,7 @@
   }
 
   .tag {
-    @apply bg-yellow-100 px-6 py-3 font-bold rounded-sm uppercase relative;
+    @apply bg-yellow-300 px-6 py-3 font-bold rounded-sm uppercase relative;
   }
 
   .heading {
@@ -189,11 +189,11 @@
   }
 
   .view-text {
-    @apply font-medium text-[16px] bg-white px-4 py-2 rounded-lg capitalize;
+    @apply font-medium text-[16px] bg-pink-100 px-4 py-2 rounded-lg capitalize;
   }
 
   .category-tag {
-    @apply font-medium text-[16px] bg-white px-4 py-2 rounded-full;
+    @apply font-medium text-[16px] bg-pink-100 px-4 py-2 rounded-full;
   }
 
   .pattern {
