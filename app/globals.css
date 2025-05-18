@@ -140,6 +140,7 @@
 
   .startup-card_desc {
     @apply font-normal text-[16px] line-clamp-2 my-3 text-black break-all;
+    min-height: 48px;
   }
 
   .startup-card_img {
