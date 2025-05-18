@@ -217,3 +217,8 @@
 .w-md-editor-toolbar {
   padding: 10px !important;
 }
+
+.__sentry-feedback-button {
+  right: auto !important;
+  left: 16px !important;
+}
